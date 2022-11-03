@@ -10,8 +10,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Currency Converter"
-        android:textSize="36sp"
+        android:text="Convertisseur de devise"
+        android:textSize="30sp"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         tools:ignore="HardcodedText" />
@@ -21,30 +21,60 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         >
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="236dp"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
             android:text="****Montant****"
             android:textSize="15sp"
-            android:layout_margin="20dp"
             tools:ignore="HardcodedText" />
+
         <EditText
             android:id="@+id/value"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:importantForAutofill="no"
             android:inputType="text"
-            tools:ignore="InvalidId,LabelFor"
-            android:importantForAutofill="no" />
+            tools:ignore="InvalidId,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
         <TextView
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="De:"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="From Currency:"
-            android:textSize="15sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <Spinner
+                android:id="@+id/from"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="A"
+            android:textSize="15sp"
             tools:ignore="HardcodedText" />
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -53,33 +83,13 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <Spinner
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:id="@+id/from"
-                android:layout_gravity="center"
-                />
-        </RelativeLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/to_currency"
-            android:textSize="15sp"
-            android:layout_margin="20dp"
-            />
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            >
-            <Spinner
-                android:layout_width="250dp"
-                android:layout_height="40dp"
                 android:id="@+id/to"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                />
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -91,9 +101,9 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="30dp"
-        android:onClick="convert"
-        android:text="@string/convert"
-        android:textColor="@color/black" />
+        android:text="convertir"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/result"
@@ -103,8 +113,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:hint="Result"
         android:importantForAutofill="no"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText,TextContrastCheck" />
 
 </LinearLayout>
